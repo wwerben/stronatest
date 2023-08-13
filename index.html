@@ -1,0 +1,526 @@
+<!doctype html>
+<html class="scroll-smooth scrollbar-hide ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>  
+  <link href="output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <main class="overflow-auto scrollbar-hide w-full h-full overflow-x-hidden">
+  
+
+    <header class="fixed top-0 z-50 w-full">
+      <div class="sticky-header px-4 py-3 flex lg:text-xl items-center bg-transparent transition-all duration-300 justify-between">
+        <div class="text-xl font-sans font-bold z-20">
+          <a href="infobase.com.pl"><img src="img/Logo_B.png" alt="Logo" class="logoo transition-all duration-300 lg:h-16 h-10 w-auto sm:ml-10 "></a>
+        </div>
+        <nav class="hidden md:block space-x-6 font-poppins mx-5 sm:mr-10 ">
+          <a href="#" class="menuprzycisk menubutton">Firma</a>
+          <a href="#" class="menuprzycisk menubutton">Oferta</a>
+          <a href="#" class="menuprzycisk menubutton">Klienci</a>
+          <a href="#" class="menuprzycisk menubutton">Aktualności</a>
+          <a href="#" class="menuprzycisk menubutton">Kontakt</a>
+        </nav>
+        <!--Mobilne-->
+        <div class="md:hidden flex items-center z-20">
+            <button class="mobile-menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+    </div>
+    
+    
+    
+    <div class="mobile-menu z-1  hidden md:hidden top-0 w-full h-fit animate-fade-down animate-duration-[1000ms] absolute bg-blue2 bg-opacity-60 font-sans text-white">
+      
+      
+      <a href="#" class="text-center m-3 block mt-14 py-2 px-4 text-base ">Strona Główna</a>
+      <a href="#" class="text-center m-3 block py-2 px-4 text-base ">Firma</a>
+      <a href="#" class="text-center m-3 block py-2 px-4 text-base ">Klienci</a>
+      <a href="#" class="text-center m-3 block py-2 px-4 text-base ">Aktualności</a>
+      <a href="#" class="text-center m-3 block py-2 px-4 text-base ">Kontakt</a>
+  
+      
+    </div>
+
+  </header>
+
+
+
+  <script>
+    // JavaScript to change the header's opacity based on scroll distance
+   
+    const header = document.querySelector('.sticky-header');
+    const logo = document.querySelector('.logoo');
+   
+
+    const headerHeight = header.clientHeight;
+    const scrollTrigger = 100; 
+
+    window.addEventListener('scroll', () => {
+     
+      const scrollDistance = window.scrollY;
+
+      if (scrollDistance > scrollTrigger) {
+        
+        header.classList.remove('lg:text-xl');
+        header.classList.add('lg:text-lg');
+        header.classList.remove('bg-transparent');
+        header.classList.add('bg-blue1');
+        logo.classList.remove('lg:h-16');
+        logo.classList.add('lg:h-10');
+      } else {
+       
+        header.classList.remove('lg:text-lg');
+        header.classList.add('lg:text-xl');
+        header.classList.remove('bg-blue1');
+        header.classList.add('bg-transparent');
+        logo.classList.add('lg:h-16');
+        logo.classList.remove('lg:h-10');
+      }
+    });
+
+    
+ 
+
+
+
+  </script>
+   
+  <script>
+
+    const btn = document.querySelector('button.mobile-menu-button');
+    const menu = document.querySelector('.mobile-menu');
+
+  btn.addEventListener('click', (event) => {
+  event.stopPropagation(); // Zapobiega propagacji zdarzenia do document
+  menu.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', (event) => {
+  if (!menu.contains(event.target)) { // Sprawdza, czy kliknięcie nastąpiło poza menu
+      menu.classList.add('hidden'); // Jeżeli tak, to ukrywa menu
+  }
+  });
+
+
+
+  </script>
+
+
+  
+    </script>
+ 
+
+    <section id="film"> 
+
+      
+      <div class="max-h-128 relative md:m-0 "> <!-- Add a relative class here -->
+        
+        <video loop autoplay class="w-full xl:h-128 md:h-110 sm:h-110 h-111 object-cover object-center overflow-hidden z-1"> <!-- Add z-index class here -->
+            <source src="img/film.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        
+        <div class="absolute inset-0 bg-blue2 opacity-75 z-1" ></div> <!-- Add an absolute class here -->
+
+
+        <div id="carousel" class="absolute inset-0 z-10 ">
+          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <img id="logo2" src="img/rfidlogo.png" alt="Logo 2" class="m-20 w-auto md:max-h-56 max-h-20 animate-fade animate-duration-[1600ms]">
+          </div>
+          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <img id="logo2" src="img/siemenslogo.png" alt="Logo 2" class="m-32 w-auto md:max-h-16 max-h-10 hidden animate-fade animate-duration-[1600ms]">
+          </div>
+          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+            <img id="logo3" src="img/Oraclelogo.png" alt="m-32 Logo 3" class="w-auto md:max-h-16 max-h-10 hidden animate-fade animate-duration-[1600ms]">
+          </div>
+        </div>
+        
+    </div>
+
+
+    
+
+    </section>
+
+
+  
+    
+    
+      
+
+   
+
+    
+
+    
+   
+
+    
+        
+         
+       
+        
+
+
+
+
+
+        
+
+          
+    </section>
+
+
+    <section id="box1" class="flex items-center justify-center md:my-5 md:mx-4 mx-2">
+      <div class="max-w-7xl flex items-center justify-center "> 
+        <div class="group relative md:p-5 p-2 flex md:flex-nowrap flex-wrap place-content-center max-w-7xl bg-white cursor-pointer items-start gap-2 overflow-hidden rounded-lg shadow-sm transition-all duration-300 hover:shadow-2xl">
+          <div class="md:w-1/3 w-full p-4 lg:mt-0 flex items-center justify-center rounded-lg">
+            <img src="img/pulsar.webp" class="justify-self-center md:h-auto w-auto h-48">
+          </div>
+          <div class="md:w-2/3 w-full flex-col gap-4 inline-flex items-center justify-center md:px-5 md:py-3">
+            <p class="font-poppins text-center md:p-5 p-3 lg:text-2xl sm:text-xl text-l font-medium">Od 30 lat z pasją i zaangażowaniem tworzymy zaawansowane projekty informatyczne dla sektora przemysłowego. Dzięki doświadczonemu zespołowi specjalistów, skutecznie łączymy technologię z praktycznymi potrzebami przemysłu, dostarczając najwyższej jakości rozwiązania. Z nami, przyszłość przemysłu staje się rzeczywistością.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+
+      
+    </section>
+    <section id="box2" class="w-full bg-transparent h-auto py-5 px-1 lg:px-5 flex items-center justify-center">
+
+
+      <div class="grid md:grid-cols-4 lg:gap-8 md:gap-4  sm:gap-4 gap-2 grid-cols-2 grid-rows-2 md:grid-rows-1 ">
+        <div class="card11 ">
+          <div class="lg:my-5 my-1">
+            <img src="img/robot.svg" alt="robot" class="card12">
+          </div>
+          <div id="text" class="p-4">
+            <div class="card13">
+              <p>Przemysł 4.0</p>
+            </div>
+            <div class="card14">
+              <p>Nowa era przemysłu oparta na zaawansowanych technologiach i automatyzacji.</p>
+            </div>
+          </div>
+        </div>
+      
+      
+  
+        <div class="card11 ">
+          <div class="lg:my-5 my-1">
+            <img src="img/fork.svg" alt="robot" class="card12">
+          </div>
+          <div id="text" class="p-4">
+            <div class="card13">
+              <p>Lorem ipsum</p>
+            </div>
+            <div class="card14">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices elementum neque.</p>
+              
+            </div>
+          </div>
+          </div>
+        
+        
+        <div class="card11">
+          <div class="lg:my-5 my-1">
+            <img src="img/dopasowanie.svg" alt="robot" class="card12">
+          </div>
+          <div id="text" class="p-4">
+            <div class="card13">
+              <p>Dopasowanie</p>
+            </div>
+            <div class="card14">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices elementum neque.</p>
+              
+            </div>
+          </div>
+        </div>
+        
+  
+        <div class="card11">
+          <div class="lg:my-5 my-1">
+            <img src="img/dos2.svg" alt="robot" class="card12">
+          </div>
+          <div id="text" class="p-4">
+            <div class="card13">
+              <p>30 lat</p>
+              <p class="-m-2">Doświadczenia</p>
+            </div>
+            <div class="card14">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices.</p>
+            </div>
+          </div>
+          
+        </div>
+        
+    
+        
+      </div>
+      
+        
+     
+     
+
+      
+    </section>
+
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-jump-in');
+                entry.target.classList.add('animate-duration-[1000ms]');
+            }
+        });
+    });
+
+    const elements = document.querySelectorAll('.observe-me'); // Zastąp '.observe-me' selektorem elementu, który chcesz obserwować.
+    elements.forEach(el => observer.observe(el));
+    });
+
+    </script>
+    
+
+    <section id="box4" class="w-full my-5 ">
+        
+      <div class="">
+    
+        
+      
+          
+        
+        
+        <div class="w-full flex flex-row flex-wrap lg:flex-row  max-m:h-15 mb-20">
+          <div class=" lg:w-1/4 w-1/2 relative group  ">
+            <img src="img/o1.webp" alt="random-image" class="object-cover">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">WMS RFID</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+    
+          <div class=" lg:w-1/4 w-1/2 relative group  ">
+            <img src="img/o2.webp" alt="random-image" class="object-cover">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Magazynowanie</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+          
+          <div class=" lg:w-1/4 w-1/2 relative group  ">
+            <img src="img/o3.webp" alt="random-image" class="object-cover">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Logistyka 
+              Zaopatrzenia</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+    
+          <div class=" lg:w-1/4 w-1/2 relative group  ">
+            <img src="img/o4.webp" alt="random-image" class="object-cover">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+          <div class=" lg:w-1/4 w-1/2 relative group  ">
+            <img src="img/o4.webp" alt="random-image" class="object-cover">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+          <div class=" lg:w-1/4 w-1/2 relative group  ">
+            <img src="img/o4.webp" alt="random-image" class="object-cover">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+          <div class=" lg:w-1/4 w-1/2 relative group  ">
+            <img src="img/o4.webp" alt="random-image" class="object-cover">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+    
+          <div class=" lg:w-1/4 w-1/2 relative group  ">
+            <img src="img/o5.webp" alt="random-image" class="object-cover">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Logistyka 
+              Sprzedaży</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+    
+          
+          
+    
+          
+          
+    
+    
+          
+    
+    
+        </div>
+        
+        
+    </div>
+      
+    Tu będą Aktualności
+    
+    
+    <script>
+      document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', () => {
+          alert('Czytaj więcej!');
+        });
+      });
+    </script>
+
+
+   
+
+
+
+
+
+   
+
+    <script>
+    const carousel = document.getElementById('carousel');
+    const logos = Array.from(carousel.getElementsByTagName('img'));
+    let currentLogoIndex = 0;
+    
+    function rotateCarousel() {
+      
+      logos[currentLogoIndex].classList.add('hidden');
+    
+      
+      currentLogoIndex = (currentLogoIndex + 1) % logos.length;
+    
+      
+      logos[currentLogoIndex].classList.remove('hidden');
+    }
+    
+    setInterval(rotateCarousel, 4000);  
+
+    </script>    
+
+
+    
+  </main>
+
+  <footer class="bg-blue2 text-white w-full m-0 overflow-x-hidden font-poppins">
+    <div class="w-full max-w-screen-6xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-around justify-center">
+          <div class="md:mb-6 mb-4 md:ml-5 flex justify-center md:justify-start">
+              <a href="#" class="flex place-self-start md:justify-items-centerjustify-items-center">
+                  <img src="img/Logo_B.png" class="lg:h-20 md:16 h-10 md:mr-3" alt="Logo" />
+                  Stopka jest do naprawienia
+                  
+              </a>
+          </div>
+          <div class="flex flex-row text-center gap-10 justify-center justify-items-center mx-10">
+              <div>
+                  <h2 class="mb-6 text-xl font-semibold text-white uppercase">Firma</h2>
+                  <ul class="text-gray-300 md:text-base text-sm font-medium">
+                      <li class="mb-4">
+                          <a href="#" class="hover:underline ">Oferta</a>
+                      </li>
+                      <li class="mb-4">
+                          <a href="#" class="hover:underline">Klienci</a>
+                      </li>
+                      <li class="mb-4">
+                        <a href="#" class="hover:underline">Aktualności</a>
+                    </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-xl font-semibold text-white uppercase ">KONTAKT</h2>
+                  <ul class="text-gray-300 md:text-base text-sm font-medium">
+                      <li class="mb-4">
+                          <p>Kolska Szosa 30</p>
+                          <p>62-700 Turek</p>
+
+                      </li>
+                      <li class="mb-4 ">
+                        <p>kontakt@infobase.com.pl</p>
+                      </li>
+                      <li class="mb-4">
+                          <p>+48123123123</p>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-gray-200  dark:border-gray-700 lg:my-8" />
+      <div class="flex justify-center items-center">
+          <span class="text-sm text-gray-500 sm:text-center ml-5 dark:text-gray-400">© 2023 <a href="" class="hover:underline">Infobase™</a>
+          
+          
+      </div>
+    </div>
+</footer>
+  
+
+</body>
+</html>
