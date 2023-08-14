@@ -127,11 +127,12 @@
       
       <div class="max-h-128 relative md:m-0 "> <!-- Add a relative class here -->
         
-        <video loop autoplay class="w-full xl:h-128 md:h-110 sm:h-110 h-111 object-cover object-center overflow-hidden z-1"> <!-- Add z-index class here -->
+        <video autoplay muted playsinline loop class="w-full xl:h-128 md:h-110 sm:h-110 h-111 object-cover object-center overflow-hidden z-1"> <!-- Add z-index class here -->
             <source src="img/film.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
         
+     
         <div class="absolute inset-0 bg-blue2 opacity-75 z-1" ></div> <!-- Add an absolute class here -->
 
 
@@ -157,8 +158,22 @@
 
   
     
-    
-      
+       <script>
+
+          document.addEventListener('DOMContentLoaded', function() {
+            var video = document.querySelector('video');
+
+            video.loop = true;    // Ustawienie wideo do zapętlenia
+            video.play();         // Próba odtworzenia wideo
+
+            // Jeśli wideo nie zacznie się automatycznie odtwarzać, możemy spróbować odtworzyć je po pierwszym kliknięciu na stronie
+            document.body.addEventListener('click', function() {
+              video.play();
+            });
+          });
+        </script>
+
+        
 
    
 
@@ -302,9 +317,13 @@
       <div class="">
     
         
-		 <div class="w-full flex flex-row flex-wrap lg:flex-row max-m:h-15 mb-20">
+      
+          
+        
+        
+        <div class="w-full flex flex-row flex-wrap lg:flex-row max-m:h-15 mb-20">
           <div class="lg:w-1/4 w-1/2 relative group h-full">
-              <img src="/img/o1.webp" alt="random-image" class="object-cover w-full h-full">
+              <img src="img/o1.webp" alt="random-image" class="object-cover w-full h-full">
               <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">WMS RFID</p>
               <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
               <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
@@ -316,7 +335,7 @@
       
     
           <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="/img/o2.webp" alt="random-image" class="object-cover w-full h-full">
+            <img src="img/o2.webp" alt="random-image" class="object-cover w-full h-full">
             <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Magazynowanie</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
             <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
@@ -329,7 +348,7 @@
           </div> 
           
           <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="/img/o3.webp" alt="random-image" class="object-cover w-full h-full">
+            <img src="img/o3.webp" alt="random-image" class="object-cover w-full h-full">
             <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Logistyka 
               Zaopatrzenia</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
@@ -343,7 +362,7 @@
           </div> 
     
           <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="/img/o4.webp" alt="random-image" class="object-cover w-full h-full">
+            <img src="img/o4.webp" alt="random-image" class="object-cover w-full h-full">
             <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
             <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
@@ -355,7 +374,7 @@
             </div>
           </div> 
           <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="/img/o4.webp" alt="random-image" class="object-cover w-full h-full">
+            <img src="img/o4.webp" alt="random-image" class="object-cover w-full h-full">
             <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
             <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
@@ -367,7 +386,7 @@
             </div>
           </div> 
           <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="/img/o4.webp" alt="random-image" class="object-cover w-full h-full">
+            <img src="img/o4.webp" alt="random-image" class="object-cover w-full h-full">
             <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
             <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
@@ -379,7 +398,7 @@
             </div>
           </div> 
           <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="/img/o4.webp" alt="random-image" class="object-cover w-full h-full">
+            <img src="img/o4.webp" alt="random-image" class="object-cover w-full h-full">
             <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
             <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
@@ -392,7 +411,7 @@
           </div> 
     
           <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="/img/o5.webp" alt="random-image" class="object-cover w-full h-full">
+            <img src="img/o5.webp" alt="random-image" class="object-cover w-full h-full">
             <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Logistyka 
               Sprzedaży</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
@@ -416,16 +435,12 @@
     
     
         </div>
-          
         
         
-        
-        
-		</div>
+    </div>
       
     Tu będą Aktualności
     
-	</section>
     
     <script>
       document.querySelectorAll('.read-more').forEach(button => {
@@ -468,58 +483,52 @@
     
   </main>
 
-  <footer class="bg-blue2 text-white w-full m-0 overflow-x-hidden font-poppins">
-    <div class="w-full max-w-screen-6xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-around justify-center">
-          <div class="md:mb-6 mb-4 md:ml-5 flex justify-center md:justify-start">
-              <a href="#" class="flex place-self-start md:justify-items-centerjustify-items-center">
-                  <img src="img/Logo_B.png" class="lg:h-20 md:16 h-10 md:mr-3" alt="Logo" />
-                  Stopka jest do naprawienia
-                  
-              </a>
-          </div>
-          <div class="flex flex-row text-center gap-10 justify-center justify-items-center mx-10">
-              <div>
-                  <h2 class="mb-6 text-xl font-semibold text-white uppercase">Firma</h2>
-                  <ul class="text-gray-300 md:text-base text-sm font-medium">
-                      <li class="mb-4">
-                          <a href="#" class="hover:underline ">Oferta</a>
-                      </li>
-                      <li class="mb-4">
-                          <a href="#" class="hover:underline">Klienci</a>
-                      </li>
-                      <li class="mb-4">
-                        <a href="#" class="hover:underline">Aktualności</a>
-                    </li>
-                  </ul>
-              </div>
-              <div>
-                  <h2 class="mb-6 text-xl font-semibold text-white uppercase ">KONTAKT</h2>
-                  <ul class="text-gray-300 md:text-base text-sm font-medium">
-                      <li class="mb-4">
-                          <p>Kolska Szosa 30</p>
-                          <p>62-700 Turek</p>
+  <footer class="scrollbar-hide overflow-x-hidden text-white font-poppins">
 
-                      </li>
-                      <li class="mb-4 ">
-                        <p>kontakt@infobase.com.pl</p>
-                      </li>
-                      <li class="mb-4">
-                          <p>+48123123123</p>
-                      </li>
-                  </ul>
-              </div>
+    <div class="p-5 bg-blue2 w-full h-fit ">
+      <div class="max-w-screen-6xl md:py-5 py-0 px-5 ">
+        <div class="grid md:grid-cols-5 grid-cols-2 md:grid-rows-1 place-content-center justify-items-center">
+          <div class="md:col-span-1 col-span-2 md:py-5 md:m-0 m-5">
+            <img src="img/Logo_B.png" alt="logo" class="max-h-20 w-auto">
           </div>
+          <div class="md:p-5 md:text-left text-center">
+            <a href="#" class="my-5 md:text-2xl text-xl font-semibold">Firma</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Oferta</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Aktulaności</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Klienci</a><br>
+          </div>
+          <div class="md:p-5 md:text-left text-center">
+            <a href="#" class="my-5 md:text-2xl text-xl font-semibold">Firma</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Oferta</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Aktulaności</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Klienci</a><br>
+            
+          </div>
+          <div class="md:p-5 py-5 md:col-span-1 col-span-2 md:text-left text-center">
+            <a href="#" class="my-5 md:text-2xl text-3xl font-semibold mb-10">Kontakt</a><br>
+            <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">Kolska Szosa 30</a><br>
+            <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">62-700 Turek</a><br>
+            <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">+48 123-123-123</a><br>
+            <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">kontakt@infobase.com.pl
+
+            </a><br>
+          </div>
+          <div class="p-5  md:col-span-1 col-span-2 ">
+            <img src="img/TreflGdansk_Logo.png" alt="logo" class="max-h-40 w-auto">
+            <p class="text-center md:text-base text-base">Oficjalny partner</p>
+          </div>
+
+        </div>
+
       </div>
-      <hr class="my-6 border-gray-200  dark:border-gray-700 lg:my-8" />
-      <div class="flex justify-center items-center">
-          <span class="text-sm text-gray-500 sm:text-center ml-5 dark:text-gray-400">© 2023 <a href="" class="hover:underline">Infobase™</a>
-          
-          
+
+      <div class="h-15 flex items-center justify-center">
+        <p class="font-poppins font-light sm:text-sm text-xs ">Copyrights © 2023 InfoBase Systemy Informatyczne</p>
       </div>
     </div>
-</footer>
-  
+
+
+  </footer>
 
 </body>
 </html>
