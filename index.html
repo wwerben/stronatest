@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>  
+  <title>InfoBase</title>
   <link href="output.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <meta name="description" content="Serwis firmy INFOBASE zajmującej sie produkcja oprogramowania. Podstawowy produkt naszej firmy ZSI PULSAR jest kompleksowym systemem wspomagającym zarządzanie w firmie." />
+  <meta name="keywords" content="oracle, transport, produkcja, CRM, koszty, RFID, TAG, magazyn wysokiego składowania, automatyczna identyfikacja, antena, czytnik, automatyczny magazyn,  kody kreskowe, zarządzanie produkcją, logistyka sprzedaży, B2B, finanse, wielowalutowość, spedycja, warsztat, stacja obsługi, kalkulacje, technologia, systemy informatyczne, komputeryzacja, programy komputerowe, zintegrowane systemy informatyczne, PULSAR, Turek, optymalizacja dystrybucji, odys, pakowanie, algorytm pakowania, najkrótsza droga, tir, optymalizacja trasy," />
 
 </head>
 <body>
@@ -20,10 +20,10 @@
     <header class="fixed top-0 z-50 w-full">
       <div class="sticky-header px-4 py-3 flex lg:text-xl items-center bg-transparent transition-all duration-300 justify-between">
         <div class="text-xl font-sans font-bold z-20">
-          <a href="infobase.com.pl"><img src="img/Logo_B.png" alt="Logo" class="logoo transition-all duration-300 lg:h-16 h-10 w-auto sm:ml-10 "></a>
+          <a href="index.html"><img src="Logo_B.png" alt="Logo" class="logoo transition-all duration-300 lg:h-16 h-10 w-auto sm:ml-10 "></a>
         </div>
         <nav class="hidden md:block space-x-6 font-poppins mx-5 sm:mr-10 ">
-          <a href="#" class="menuprzycisk menubutton">Firma</a>
+          <a href="1.html" class="menuprzycisk menubutton">Firma</a>
           <a href="#" class="menuprzycisk menubutton">Oferta</a>
           <a href="#" class="menuprzycisk menubutton">Klienci</a>
           <a href="#" class="menuprzycisk menubutton">Aktualności</a>
@@ -44,8 +44,8 @@
     <div class="mobile-menu z-1  hidden md:hidden top-0 w-full h-fit animate-fade-down animate-duration-[1000ms] absolute bg-blue2 bg-opacity-60 font-sans text-white">
       
       
-      <a href="#" class="text-center m-3 block mt-14 py-2 px-4 text-base ">Strona Główna</a>
-      <a href="#" class="text-center m-3 block py-2 px-4 text-base ">Firma</a>
+      <a href="index.html" class="text-center m-3 block mt-14 py-2 px-4 text-base ">Strona Główna</a>
+      <a href="1.html" class="text-center m-3 block py-2 px-4 text-base ">Firma</a>
       <a href="#" class="text-center m-3 block py-2 px-4 text-base ">Klienci</a>
       <a href="#" class="text-center m-3 block py-2 px-4 text-base ">Aktualności</a>
       <a href="#" class="text-center m-3 block py-2 px-4 text-base ">Kontakt</a>
@@ -58,7 +58,7 @@
 
 
   <script>
-    // JavaScript to change the header's opacity based on scroll distance
+   
    
     const header = document.querySelector('.sticky-header');
     const logo = document.querySelector('.logoo');
@@ -76,14 +76,14 @@
         header.classList.remove('lg:text-xl');
         header.classList.add('lg:text-lg');
         header.classList.remove('bg-transparent');
-        header.classList.add('bg-blue1');
+        header.classList.add('bg-blue2');
         logo.classList.remove('lg:h-16');
         logo.classList.add('lg:h-10');
       } else {
        
         header.classList.remove('lg:text-lg');
         header.classList.add('lg:text-xl');
-        header.classList.remove('bg-blue1');
+        header.classList.remove('bg-blue2');
         header.classList.add('bg-transparent');
         logo.classList.add('lg:h-16');
         logo.classList.remove('lg:h-10');
@@ -103,48 +103,69 @@
     const menu = document.querySelector('.mobile-menu');
 
   btn.addEventListener('click', (event) => {
-  event.stopPropagation(); // Zapobiega propagacji zdarzenia do document
+  event.stopPropagation(); 
   menu.classList.toggle('hidden');
   });
 
   document.addEventListener('click', (event) => {
-  if (!menu.contains(event.target)) { // Sprawdza, czy kliknięcie nastąpiło poza menu
-      menu.classList.add('hidden'); // Jeżeli tak, to ukrywa menu
+  if (!menu.contains(event.target)) { 
+      menu.classList.add('hidden'); 
   }
   });
 
 
 
   </script>
-
-
   
-    </script>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const elements = document.querySelectorAll('.my-element');
+
+      window.addEventListener('scroll', function() {
+        elements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          const threshold = 0.8; 
+
+          
+          if (elementTop < windowHeight * threshold) {
+            element.classList.remove('opacity-0', 'translate-y-10');
+            element.classList.add('opacity-100', 'translate-y-0');
+          }
+        });
+      });
+    });
+
+
+  </script>
+  
+   
  
 
     <section id="film"> 
 
       
-      <div class="max-h-128 relative md:m-0 "> <!-- Add a relative class here -->
+      <div class="max-h-screen relative md:m-0 ">
         
-        <video autoplay muted playsinline loop class="w-full xl:h-128 md:h-110 sm:h-110 h-111 object-cover object-center overflow-hidden z-1"> <!-- Add z-index class here -->
-            <source src="img/film.mp4" type="video/mp4">
+        <video autoplay muted playsinline loop class="w-full xl:h-screen md:h-110 sm:h-110 h-111 object-cover object-center overflow-hidden z-1">
+            <source src="film.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
         
      
-        <div class="absolute inset-0 bg-blue2 opacity-75 z-1" ></div> <!-- Add an absolute class here -->
+        <div class="absolute inset-0 bg-blue2 opacity-75 z-1" ></div> 
 
 
         <div id="carousel" class="absolute inset-0 z-10 ">
           <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-            <img id="logo2" src="img/rfidlogo.png" alt="Logo 2" class="m-20 w-auto md:max-h-56 max-h-20 animate-fade animate-duration-[1600ms]">
+            <img id="logo2" src="rfidlogo.png" alt="Logo 2" class="m-20 w-auto md:max-h-56 max-h-20 animate-fade animate-duration-[1600ms]">
           </div>
           <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-            <img id="logo2" src="img/siemenslogo.png" alt="Logo 2" class="m-32 w-auto md:max-h-16 max-h-10 hidden animate-fade animate-duration-[1600ms]">
+            <img id="logo2" src="siemenslogo.png" alt="Logo 2" class="m-32 w-auto md:max-h-16 max-h-10 hidden animate-fade animate-duration-[1600ms]">
           </div>
           <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-            <img id="logo3" src="img/Oraclelogo.png" alt="m-32 Logo 3" class="w-auto md:max-h-16 max-h-10 hidden animate-fade animate-duration-[1600ms]">
+            <img id="logo3" src="Oraclelogo.png" alt="m-32 Logo 3" class="w-auto md:max-h-16 max-h-10 hidden animate-fade animate-duration-[1600ms]">
           </div>
         </div>
         
@@ -163,10 +184,9 @@
           document.addEventListener('DOMContentLoaded', function() {
             var video = document.querySelector('video');
 
-            video.loop = true;    // Ustawienie wideo do zapętlenia
-            video.play();         // Próba odtworzenia wideo
+            video.loop = true;    
+            video.play();         
 
-            // Jeśli wideo nie zacznie się automatycznie odtwarzać, możemy spróbować odtworzyć je po pierwszym kliknięciu na stronie
             document.body.addEventListener('click', function() {
               video.play();
             });
@@ -199,10 +219,10 @@
 
 
     <section id="box1" class="flex items-center justify-center md:my-5 md:mx-4 mx-2">
-      <div class="max-w-7xl flex items-center justify-center "> 
-        <div class="group relative md:p-5 p-2 flex md:flex-nowrap flex-wrap place-content-center max-w-7xl bg-white cursor-pointer items-start gap-2 overflow-hidden rounded-lg shadow-sm transition-all duration-300 hover:shadow-2xl">
+      <div class="animate-fade-up max-w-7xl flex items-center justify-center "> 
+        <div class="group relative md:p-5 p-2 flex md:flex-nowrap flex-wrap place-content-center max-w-7xl bg-white cursor-pointer gap-2 overflow-hidden rounded-lg shadow-sm transition-all duration-300 hover:shadow-2xl">
           <div class="md:w-1/3 w-full p-4 lg:mt-0 flex items-center justify-center rounded-lg">
-            <img src="img/pulsar.webp" class="justify-self-center md:h-auto w-auto h-48">
+            <img src="pulsar.webp" class="justify-self-center md:h-auto w-auto h-48">
           </div>
           <div class="md:w-2/3 w-full flex-col gap-4 inline-flex items-center justify-center md:px-5 md:py-3">
             <p class="font-poppins text-center md:p-5 p-3 lg:text-2xl sm:text-xl text-l font-medium">Od 30 lat z pasją i zaangażowaniem tworzymy zaawansowane projekty informatyczne dla sektora przemysłowego. Dzięki doświadczonemu zespołowi specjalistów, skutecznie łączymy technologię z praktycznymi potrzebami przemysłu, dostarczając najwyższej jakości rozwiązania. Z nami, przyszłość przemysłu staje się rzeczywistością.</p>
@@ -214,84 +234,21 @@
 
       
     </section>
-    <section id="box2" class="w-full bg-transparent h-auto py-5 px-1 lg:px-5 flex items-center justify-center">
 
-
-      <div class="grid md:grid-cols-4 lg:gap-8 md:gap-4  sm:gap-4 gap-2 grid-cols-2 grid-rows-2 md:grid-rows-1 ">
-        <div class="card11 ">
-          <div class="lg:my-5 my-1">
-            <img src="img/robot.svg" alt="robot" class="card12">
-          </div>
-          <div id="text" class="p-4">
-            <div class="card13">
-              <p>Przemysł 4.0</p>
-            </div>
-            <div class="card14">
-              <p>Nowa era przemysłu oparta na zaawansowanych technologiach i automatyzacji.</p>
-            </div>
-          </div>
-        </div>
-      
-      
-  
-        <div class="card11 ">
-          <div class="lg:my-5 my-1">
-            <img src="img/fork.svg" alt="robot" class="card12">
-          </div>
-          <div id="text" class="p-4">
-            <div class="card13">
-              <p>Lorem ipsum</p>
-            </div>
-            <div class="card14">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices elementum neque.</p>
-              
-            </div>
-          </div>
-          </div>
-        
-        
-        <div class="card11">
-          <div class="lg:my-5 my-1">
-            <img src="img/dopasowanie.svg" alt="robot" class="card12">
-          </div>
-          <div id="text" class="p-4">
-            <div class="card13">
-              <p>Dopasowanie</p>
-            </div>
-            <div class="card14">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices elementum neque.</p>
-              
-            </div>
-          </div>
-        </div>
-        
-  
-        <div class="card11">
-          <div class="lg:my-5 my-1">
-            <img src="img/dos2.svg" alt="robot" class="card12">
-          </div>
-          <div id="text" class="p-4">
-            <div class="card13">
-              <p>30 lat</p>
-              <p class="-m-2">Doświadczenia</p>
-            </div>
-            <div class="card14">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices.</p>
-            </div>
-          </div>
-          
-        </div>
-        
     
-        
+    <section id="boxpar" class="flex items-center justify-center md:my-10 my-3 md:mx-4 mx-2">
+      <div class="my-element opacity-0 transform translate-y-10 transition-all duration-1000 max-w-7xl max-h-32 flex items-center justify-center "> 
+        <div class="group relative md:p-5 p-2 flex flex-nowrap place-content-center max-w-7xl bg-white cursor-pointer xl:gap-48 md:gap-20 sm:gap-5 overflow-hidden rounded-lg ">
+          <div class="md:w-1/2 w-full p-4 lg:mt-0 flex items-center justify-center rounded-lg">
+            <img src="oraclesilver.png" class="justify-self-center md:h-auto w-auto max-h-32">
+          </div>
+          <div class="md:w-1/2 w-full flex-col gap-4 inline-flex items-center justify-center md:px-5 md:py-3">
+            <img src="SiemensPartner.jpg" class="justify-self-center md:h-auto w-auto max-h-32">
+          </div>
+        </div>
       </div>
-      
-        
-     
-     
-
-      
     </section>
+
 
     <script>
 
@@ -305,14 +262,14 @@
         });
     });
 
-    const elements = document.querySelectorAll('.observe-me'); // Zastąp '.observe-me' selektorem elementu, który chcesz obserwować.
+    const elements = document.querySelectorAll('.observe-me'); 
     elements.forEach(el => observer.observe(el));
     });
 
     </script>
     
 
-    <section id="box4" class="w-full my-5 ">
+    <section id="box4" class="w-full overflow-hidden ">
         
       <div class="">
     
@@ -321,125 +278,180 @@
           
         
         
-        <div class="w-full flex flex-row flex-wrap lg:flex-row max-m:h-15 mb-20">
-          <div class="lg:w-1/4 w-1/2 relative group h-full">
-              <img src="img/o1.webp" alt="random-image" class="object-cover w-full h-full">
-              <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">WMS RFID</p>
-              <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-              <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
-              <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-                  <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button>
-              </div>
-          </div>
+        <div class="my-element opacity-0 transform translate-y-10 transition-all duration-1000 w-full flex flex-row flex-wrap lg:flex-row ">
+
+          <div class="lg:w-1/4 w-1/2 relative group ">
+            <img src="o1.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">E-commerce</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+            <div class="absolute inset-0 bg-transparent md:flex items-center z-20 justify-center opacity-0 hidden group-hover:opacity-70 transition-opacity duration-300">
+                <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end lg:mb-3 md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button>
+            </div>
+        </div>
+        
           
       
     
-          <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="img/o2.webp" alt="random-image" class="object-cover w-full h-full">
-            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Magazynowanie</p>
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o2.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">WMS RFID</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
             <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
             </div>
-            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+           hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+
+          
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o3.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+
+          
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o4.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Transport</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+
+          
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o5.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">EDI</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
              <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
           hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
            dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
             </div>
           </div> 
           
-          <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="img/o3.webp" alt="random-image" class="object-cover w-full h-full">
-            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Logistyka 
-              Zaopatrzenia</p>
+          
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o6.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">PTP</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
             <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
             </div>
-            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div>
+          
+          
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o7.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Magazyn</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
              <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
           hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
            dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
             </div>
           </div> 
-    
-          <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="img/o4.webp" alt="random-image" class="object-cover w-full h-full">
-            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
+
+          
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o8.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">API</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
             <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
             </div>
-            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
              <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
           hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
            dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
             </div>
           </div> 
-          <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="img/o4.webp" alt="random-image" class="object-cover w-full h-full">
-            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
-            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-            </div>
-            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-            </div>
-          </div> 
-          <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="img/o4.webp" alt="random-image" class="object-cover w-full h-full">
-            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
-            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-            </div>
-            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-            </div>
-          </div> 
-          <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="img/o4.webp" alt="random-image" class="object-cover w-full h-full">
-            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Produkcja</p>
-            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
-            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-            </div>
-            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
-             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
-          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
-           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
-            </div>
-          </div> 
-    
-          <div class=" lg:w-1/4 w-1/2 relative group  ">
-            <img src="img/o5.webp" alt="random-image" class="object-cover w-full h-full">
+          
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o9.webp" alt="random-image" class="object-cover w-full h-full">
             <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Logistyka 
               Sprzedaży</p>
             <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
             <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
             </div>
-            <div class="absolute inset-0 bg-transparent flex items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
              <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
           hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
            dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
             </div>
           </div> 
-    
           
           
-    
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o10.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Edytor etykiet</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div>
           
-          
-    
-    
-          
-    
-    
+        
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o11.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Informator24</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+
+          <div class=" lg:w-1/4 w-1/2 relative group">
+            <img src="o12.webp" alt="random-image" class="object-cover w-full h-full">
+            <p class="text-center absolute inset-0 flex items-center text-shadow-xl justify-center font-poppins lg:text-3xl md:text-2xl text-xl z-10 text-white whitespace-pre-line select-none">Logistyka 
+              Zaopatrzenia</p>
+            <div class="absolute inset-0 bg-blue3 bg-opacity-80 flex items-center justify-center opacity-50"></div>
+            <div class="absolute inset-0 bg-blue2 bg-opacity-80 flex items-center z-8 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+            </div>
+            <div class="absolute inset-0 bg-transparent md:flex hidden items-center z-20 justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+             <button type="button" class="absolute animate-fade-up animate-duration-[1500ms] z-30 animate-delay-[300ms] text-gray-900 self-end md:mb-6 mb-2 z-11 bg-white border border-gray-300 focus:outline-none
+          hover:bg-gray-100 focus:ring-gray-200 font-medium rounded-lg text-xs px-5 py-2.5 mr-2  dark:bg-gray-800
+           dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 bg-opacity-30 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#">Czytaj więcej</a></button> 
+            </div>
+          </div> 
+         
         </div>
         
         
     </div>
       
-    Tu będą Aktualności
+  
     
     
     <script>
@@ -450,7 +462,160 @@
       });
     </script>
 
+<section>
 
+  <div class="w-full lg+:h-fit h-fit  bg-gray-600 lg+:py-10 py-10">
+    <div class="flex relative items-center justify-center ">
+      <div class="absolute">
+        
+          
+          <svg class="absolute z-1 md:block hidden top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" width="2" height="1250" xmlns="http://www.w3.org/2000/svg">
+              <line x1="1" y1="1" x2="1" y2="3000" stroke="white" stroke-width="2" />
+          </svg>
+
+          <svg class="absolute z-1 md:hidden block top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" width="2" height="2000" xmlns="http://www.w3.org/2000/svg">
+            <line x1="1" y1="1" x2="1" y2="3000" stroke="white" stroke-width="2" />
+        </svg>
+
+
+     
+      </div>
+      <div class="grid z-10 md:grid-cols-2 grid-cols-1 lg+:gap-x-72 gap-x-40 gap-y-10 justify-items-center ">
+
+        <div class="my-element opacity-0 transform translate-y-10 transition-all duration-1000 text-white font-poppins text-2xl font-bold lg:text-left text-center h-32 md:mb-0 lg+:w-96 w-80 mb-16">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ipsum repudiandae! Assumenda.
+        </div>
+
+          <div class="my-element opacity-0 transform translate-y-10 transition-all duration-1000 h-auto lg+:w-96 w-80 lg+:m-0 m-5 bg-white">
+            <p class="absolute krok1 md:hidden block -mt-[50px] ml-[123px] ">Krok 1 </p>
+            <div class="lg+:h-52 h-44 "> 
+              <div class="absolute md:hidden lg+:w-96 w-80 h-10 bg-opacity-75 bg-blue6 text-center flex justify-center items-center text-white font-poppins text-base font-bold py-3 px-3">
+                Produkcja
+              </div>
+              <img src="o3.webp" class="object-cover lg+:h-52 h-44 w-full" alt="cos">
+              
+              <div class="top-0 md:block hidden lg+:-mt-44 -mt-36 ml-[px]">
+                
+                <span class="bg-blue6  text-white font-poppins lg+:text-base text-sm font-bold lg+:py-3 lg+:px-3 px-2 py-2">Produkcja</span>
+                    <svg class="lg+:w-[45px] lg+:h-[45px] w-[36px] h-[36px] text-blue6 lg+:-mt-[35px] lg+:-ml-[40px] -ml-[30px] -mt-[30px] rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 16">
+                  <path d="M0 .984v14.032a1 1 0 0 0 1.506.845l12.006-7.016a.974.974 0 0 0 0-1.69L1.506.139A1 1 0 0 0 0 .984Z"/>
+                </svg>
+                <p class="krok1 lg+:-ml-[180px] md:block hidden lg+:-mt-[40px] -ml-[137px] -mt-[35px]">Krok 1 </p>
+              </div>
+            </div>
+            <div class="px-10 py-5 font-poppins  ">
+              <p class="font-bold text-xl pb-1 pt-2">Lorem ipsum</p>
+              <p class="text-base pb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor est unde quos cupiditate.</p>
+            </div>
+            <p class="krok1 md:hidden block ml-[123px] -mb-[60px] ">Krok 2 </p>
+          </div>
+
+        <div>
+          <div class="my-element opacity-0 transform translate-y-10 transition-all duration-1000 h-auto lg+:w-96 w-80 bg-white  lg+:m-0 m-5">
+            <div class="lg+:h-52 h-44 md:-mt-52"> 
+              <div class="absolute md:hidden lg+:w-96 w-80 h-10 bg-opacity-75 bg-blue6 text-center flex justify-center items-center text-white font-poppins text-base font-bold py-3 px-3">
+                Produkcja
+              </div>
+              <img src="o2.webp" class="object-cover lg+:h-52 h-44 w-full" alt="cos">
+              <div class="top-0 md:block hidden lg+:-mt-44 -mt-36 ml-[px]">
+                <span class="bg-blue6  text-white font-poppins lg+:text-base rotate-180 text-sm font-bold lg+:py-3 lg+:ml-[277px] ml-[231px] lg+:px-3 px-2 py-2">Produkcja</span>
+                    <svg class="lg+:w-[45px] lg+:h-[45px] w-[36px] h-[36px] text-blue6 lg+:-mt-[35px]  lg+:ml-[380px] ml-[317px] -mt-[30px] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 16">
+                  <path d="M0 .984v14.032a1 1 0 0 0 1.506.845l12.006-7.016a.974.974 0 0 0 0-1.69L1.506.139A1 1 0 0 0 0 .984Z"/>
+                </svg>
+                <p class="krok1 ml-[382px] -mt-[35px] lg+:ml-[490px] lg+:-mt-[40px]">Krok 2 </p>
+
+              </div>
+              
+            </div>
+            <div class="px-10 py-5 font-poppins  ">
+              <p class="font-bold text-xl pb-1 pt-2">Lorem ipsum</p>
+              <p class="text-base pb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor est unde quos cupiditate.</p>
+            </div>
+            <p class="absolute krok1 md:hidden block ml-[123px] mt-[23px] ">Krok 3 </p>
+          </div>
+          
+        </div>
+        
+       
+
+        <div>
+          <div class="my-element opacity-0 transform translate-y-10 transition-all duration-1000 h-auto lg+:w-96 w-80  xl:mt-14 bg-white  lg+:m-0 m-5">
+            <div class="lg+:h-52 h-44"> 
+              <div class="absolute md:hidden lg+:w-96 w-80 h-10 bg-opacity-75 bg-blue6 text-center flex justify-center items-center text-white font-poppins text-base font-bold py-3 px-3">
+                Produkcja
+              </div>
+              <img src="o1.webp" class="object-cover lg+:h-52 h-44 w-full" alt="cos">
+              <div class="top-0 md:block hidden lg+:-mt-44 -mt-[144px] ml-[px]">
+                <span class="bg-blue6  text-white font-poppins lg+:text-base text-sm font-bold lg+:py-3 lg+:px-3 px-2 py-2">Produkcja</span>
+                    <svg class="lg+:w-[45px] lg+:h-[45px] w-[36px] h-[36px] text-blue6 lg+:-mt-[35px] lg+:-ml-[40px] -ml-[30px] -mt-[30px] rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 16">
+                  <path d="M0 .984v14.032a1 1 0 0 0 1.506.845l12.006-7.016a.974.974 0 0 0 0-1.69L1.506.139A1 1 0 0 0 0 .984Z"/>
+                </svg>
+                <p class="krok1 lg+:-ml-[180px] lg+:-mt-[40px] -ml-[137px] -mt-[35px]">Krok 3</p>
+              </div>
+            </div>
+            <div class="px-10 py-5 font-poppins  ">
+              <p class="font-bold text-xl pb-1 pt-2">Lorem ipsum</p>
+              <p class="text-base pb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor est unde quos cupiditate.</p>
+            </div>
+            <p class="absolute krok1 md:hidden block ml-[123px] mt-[23px] ">Krok 4 </p>
+          </div>
+
+        </div>
+        
+        <div>
+          <div class="my-element opacity-0 transform translate-y-10 transition-all duration-1000 h-auto lg+:w-96 w-80  bg-white  lg+:m-0 m-5">
+            <div class="lg+:h-52 h-44 lg+:-mt-52 md:-mt-52"> 
+              <div class="absolute md:hidden lg+:w-96 w-80 h-10 bg-opacity-75 bg-blue6 text-center flex justify-center items-center text-white font-poppins text-base font-bold py-3 px-3">
+                Produkcja
+              </div>
+              <img src="o6.webp" class="object-cover lg+:h-52 h-44 w-full" alt="cos">
+              <div class="top-0 md:block hidden lg+:-mt-44 -mt-36 ml-[px]">
+                <span class="bg-blue6  text-white font-poppins lg+:text-base rotate-180 text-sm font-bold lg+:py-3 lg+:ml-[277px] ml-[231px] lg+:px-3 px-2 py-2">Produkcja</span>
+                    <svg class="lg+:w-[45px] lg+:h-[45px] w-[36px] h-[36px] text-blue6 lg+:-mt-[35px]  lg+:ml-[380px] ml-[317px] -mt-[30px] " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 16">
+                  <path d="M0 .984v14.032a1 1 0 0 0 1.506.845l12.006-7.016a.974.974 0 0 0 0-1.69L1.506.139A1 1 0 0 0 0 .984Z"/>
+                </svg>
+                <p class="krok1 ml-[382px] -mt-[35px] lg+:ml-[490px] lg+:-mt-[40px]">Krok 4 </p>
+              </div>
+              
+            </div>
+            <div class="px-10 py-5 font-poppins  ">
+              <p class="font-bold text-xl pb-1 pt-2">Lorem ipsum</p>
+              <p class="text-base pb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor est unde quos cupiditate.</p>
+            </div>
+            <p class="absolute krok1 md:hidden block ml-[123px] mt-[23px] ">Krok 5 </p>
+          </div>
+
+        </div>
+        <div>
+          <div class="my-element opacity-0 transform translate-y-10 transition-all duration-1000 h-auto lg+:w-96 w-80 xl:mt-14 bg-white  lg+:m-0 m-5">
+            <div class="lg+:h-52 h-44"> 
+              <div class="absolute md:hidden lg+:w-96 w-80 h-10 bg-opacity-75 bg-blue6 text-center flex justify-center items-center text-white font-poppins text-base font-bold py-3 px-3">
+                Produkcja
+              </div> 
+              <img src="o5.webp" class="object-cover lg+:h-52 h-44 w-full" alt="cos">
+              <div class="top-0 md:block hidden lg+:-mt-44 -mt-[144px] ml-[px]">
+                <span class="bg-blue6  text-white font-poppins lg+:text-base text-sm font-bold lg+:py-3 lg+:px-3 px-2 py-2">Produkcja</span>
+                    <svg class="lg+:w-[45px] lg+:h-[45px] w-[36px] h-[36px] text-blue6 lg+:-mt-[35px] lg+:-ml-[40px] -ml-[30px] -mt-[30px] rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 16">
+                  <path d="M0 .984v14.032a1 1 0 0 0 1.506.845l12.006-7.016a.974.974 0 0 0 0-1.69L1.506.139A1 1 0 0 0 0 .984Z"/>
+                </svg>
+                <p class="krok1 lg+:-ml-[180px] lg+:-mt-[40px] -ml-[137px] -mt-[35px]">Krok 5 </p>
+              </div>
+            </div>
+            <div class="px-10 py-5 font-poppins  ">
+              <p class="font-bold text-xl pb-1 pt-2">Lorem ipsum</p>
+              <p class="text-base pb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor est unde quos cupiditate.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+ </section>
    
 
 
@@ -488,24 +653,24 @@
     <div class="p-5 bg-blue2 w-full h-fit ">
       <div class="max-w-screen-6xl md:py-5 py-0 px-5 ">
         <div class="grid md:grid-cols-5 grid-cols-2 md:grid-rows-1 place-content-center justify-items-center">
-          <div class="md:col-span-1 col-span-2 md:py-5 md:m-0 m-5">
-            <img src="img/Logo_B.png" alt="logo" class="max-h-20 w-auto">
+          <div class="md:col-span-1 col-span-2 md:py-10 md:m-0 m-5">
+            <img src="Logo_B.png" alt="logo" class="max-h-20 w-auto">
           </div>
           <div class="md:p-5 md:text-left text-center">
-            <a href="#" class="my-5 md:text-2xl text-xl font-semibold">Firma</a><br>
+            <a href="#" class="my-5 md:text-2xl text-xl font-semibold underline-animation">Firma</a><br>
             <a href="#" class="my-5 md:text-base text-sm font-light">Oferta</a><br>
             <a href="#" class="my-5 md:text-base text-sm font-light">Aktulaności</a><br>
             <a href="#" class="my-5 md:text-base text-sm font-light">Klienci</a><br>
           </div>
           <div class="md:p-5 md:text-left text-center">
-            <a href="#" class="my-5 md:text-2xl text-xl font-semibold">Firma</a><br>
+            <a href="#" class="my-5 md:text-2xl text-xl font-semibold underline-animation">Firma</a><br>
             <a href="#" class="my-5 md:text-base text-sm font-light">Oferta</a><br>
             <a href="#" class="my-5 md:text-base text-sm font-light">Aktulaności</a><br>
             <a href="#" class="my-5 md:text-base text-sm font-light">Klienci</a><br>
             
           </div>
           <div class="md:p-5 py-5 md:col-span-1 col-span-2 md:text-left text-center">
-            <a href="#" class="my-5 md:text-2xl text-3xl font-semibold mb-10">Kontakt</a><br>
+            <a href="#" class="my-5 md:text-2xl text-3xl font-semibold mb-10 underline-animation">Kontakt</a><br>
             <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">Kolska Szosa 30</a><br>
             <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">62-700 Turek</a><br>
             <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">+48 123-123-123</a><br>
@@ -513,8 +678,8 @@
 
             </a><br>
           </div>
-          <div class="p-5  md:col-span-1 col-span-2 ">
-            <img src="img/TreflGdansk_Logo.png" alt="logo" class="max-h-40 w-auto">
+          <div class="p-5 md:col-span-1 col-span-2 ">
+            <img src="TreflGdansk_Logo.png" alt="logo" class="max-h-40 w-auto">
             <p class="text-center md:text-base text-base">Oficjalny partner</p>
           </div>
 
