@@ -1,0 +1,344 @@
+<!doctype html>
+<html class="scroll-smooth scrollbar-hide ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>  
+  <title>InfoBase</title>
+  <link href="output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+
+
+  <meta name="description" content="Serwis firmy INFOBASE zajmującej sie produkcja oprogramowania. Podstawowy produkt naszej firmy ZSI PULSAR jest kompleksowym systemem wspomagającym zarządzanie w firmie." />
+  <meta name="keywords" content="oracle, transport, produkcja, CRM, koszty, RFID, TAG, magazyn wysokiego składowania, automatyczna identyfikacja, antena, czytnik, automatyczny magazyn,  kody kreskowe, zarządzanie produkcją, logistyka sprzedaży, B2B, finanse, wielowalutowość, spedycja, warsztat, stacja obsługi, kalkulacje, technologia, systemy informatyczne, komputeryzacja, programy komputerowe, zintegrowane systemy informatyczne, PULSAR, Turek, optymalizacja dystrybucji, odys, pakowanie, algorytm pakowania, najkrótsza droga, tir, optymalizacja trasy," />
+
+</head>
+<body>
+  <main class="overflow-auto font-poppins scrollbar-hide w-full h-full overflow-x-hidden">
+  
+
+    <header class="fixed top-0 z-50 w-full">
+      <div class="sticky-header px-4 py-3 flex lg:text-xl items-center bg-transparent transition-all duration-300 justify-between">
+        <div class="text-xl font-sans font-bold z-20">
+          <a href="index.html"><img src="img/Logo_B.png" alt="Logo" class="logoo transition-all duration-300 lg:h-16 h-10 w-auto sm:ml-10 "></a>
+        </div>
+        <nav class="hidden md:block space-x-6 font-poppins mx-5 sm:mr-10 ">
+          <a href="firma.html" class="menuprzycisk menubutton">Firma</a>
+          <a href="oferta.html" class="menuprzycisk menubutton hover:">Oferta</a>
+          <a href="aktualnosci.html" class="menuprzycisk menubutton">Aktualności</a>
+          <a href="kontakt.html" class="menuprzycisk menubutton">Kontakt</a>
+        </nav>
+        <!--Mobilne-->
+        <div class="md:hidden flex items-center z-20">
+            <button class="mobile-menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+    </div>
+    
+    
+    
+    <div class="mobile-menu z-1  hidden md:hidden top-0 w-full h-fit animate-fade-down animate-duration-[1000ms] absolute bg-blue2 bg-opacity-60 font-sans text-white">
+      
+      
+      <a href="index.html" class="text-center m-3 block mt-14 py-2 px-4 text-base ">Strona Główna</a>
+      <a href="firma.html" class="text-center m-3 block py-2 px-4 text-base ">Firma</a>
+      <a href="oferta.html" class="text-center m-3 block py-2 px-4 text-base ">Oferta</a>
+      <a href="aktualnosci.html" class="text-center m-3 block py-2 px-4 text-base ">Aktualności</a>
+      <a href="kontakt.html" class="text-center m-3 block py-2 px-4 text-base ">Kontakt</a>
+  
+      
+    </div>
+
+  </header>
+
+
+
+  <script>
+   
+   
+    const header = document.querySelector('.sticky-header');
+    const logo = document.querySelector('.logoo');
+   
+
+    const headerHeight = header.clientHeight;
+    const scrollTrigger = 100; 
+
+    window.addEventListener('scroll', () => {
+     
+      const scrollDistance = window.scrollY;
+
+      if (scrollDistance > scrollTrigger) {
+        
+        header.classList.remove('lg:text-xl');
+        header.classList.add('lg:text-lg');
+        header.classList.remove('bg-transparent');
+        header.classList.add('bg-blue2');
+        logo.classList.remove('lg:h-16');
+        logo.classList.add('lg:h-10');
+      } else {
+       
+        header.classList.remove('lg:text-lg');
+        header.classList.add('lg:text-xl');
+        header.classList.remove('bg-blue2');
+        header.classList.add('bg-transparent');
+        logo.classList.add('lg:h-16');
+        logo.classList.remove('lg:h-10');
+      }
+    });
+
+    
+ 
+
+
+
+  </script>
+
+ 
+   
+  <script>
+
+    const btn = document.querySelector('button.mobile-menu-button');
+    const menu = document.querySelector('.mobile-menu');
+
+  btn.addEventListener('click', (event) => {
+  event.stopPropagation(); 
+  menu.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', (event) => {
+  if (!menu.contains(event.target)) { 
+      menu.classList.add('hidden'); 
+  }
+  });
+
+
+
+  </script>
+
+
+  
+    </script>
+ 
+
+    <section id="film"> 
+
+      
+      <div class="max-h-screen relative bg-blue1 md:m-0 ">
+        
+    
+     
+        
+
+
+        <div id="carousel" class=" inset-0">
+          <div class=" top-0 left-0 w-full h-full flex items-center relative justify-center">
+            
+            <p class=" absolute lg:text-7xl text-5xl z-20 text-white font-medium">Kontakt</p>
+            <img id="Zdjecie " src="img/uscisk.jpg" alt="Zdjecie firma budynek male" class="karuzela z-2 max-h-screen">
+            
+            <div class="absolute w-full max-h-screen opacity-60 z-10 inset-0 bg-blue2"></div>
+
+            </div>
+
+            <div class="arrowdown">
+
+                <img id="Zdjecie " src="img/down.png" alt="Zdjecie firma budynek male" class="flex h-10 w-auto ">
+              </div>
+            
+          </div>
+          
+
+          </div>
+        
+    </div>
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.my-element');
+
+        window.addEventListener('scroll', function() {
+          elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            const threshold = 0.85; 
+
+            
+            if (elementTop < windowHeight * threshold) {
+              element.classList.remove('opacity-0', 'translate-y-10');
+              element.classList.add('opacity-100', 'translate-y-0');
+            }
+          });
+        });
+      });
+
+
+    </script>
+    
+
+    </section>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+          const elements = document.querySelectorAll('.my-element');
+  
+          window.addEventListener('scroll', function() {
+            elements.forEach(element => {
+              const elementTop = element.getBoundingClientRect().top;
+              const windowHeight = window.innerHeight;
+              const threshold = 0.85; 
+  
+              
+              if (elementTop < windowHeight * threshold) {
+                element.classList.remove('opacity-0', 'translate-y-10');
+                element.classList.add('opacity-100', 'translate-y-0');
+              }
+            });
+          });
+        });
+  
+  
+      </script>
+      
+  
+      </section>
+      <section class="flex items-center justify-center">
+  
+        <div class="max-w-6xl flex md:justify-between justify-center items-center lg:gap-32 md:gap-10  gap-5 flex-wrap md:flex-nowrap h-auto lg:px-16 px-2 py-10  ">
+  
+           
+        
+            
+            <div class="text-xl">
+                               
+            <div class="flex items-center mb-4">
+                <img src="img/telephone.svg" alt="" class="w-8 h-8 mr-4 text-green-500">
+                <span class="text-gray-700">+48 (63) 278 88 88</span>
+            </div>
+
+           
+            <div class="flex items-center mb-4">
+                <img src="img/envelope.svg" alt="" class="w-8 h-8 mr-4 text-green-500">
+                <span class="text-gray-700">ibsi@infobase.com.pl</span>
+            </div>
+
+     
+            <div class="flex items-center mb-4">
+                <img src="img/geo-alt.svg" alt="" class="w-9 h-9 mr-4 text-green-500">
+                <span class="text-gray-700 whitespace-pre-line text-center">ul. Kolska Szosa 30  
+                     62-700 Turek </span>
+            </div>
+
+            </div>
+            
+            <div>
+                <iframe height="200"  class="md:hidden block" src="https://www.openstreetmap.org/export/embed.html?bbox=17.93998718261719%2C51.82516901319479%2C19.086685180664066%2C52.21307644807518&amp;layer=mapnik&amp;marker=52.019543202230835%2C18.513336181640625" style="border: 1px solid black"></iframe>
+                <iframe height="300" width="450" class="hidden md:block" src="https://www.openstreetmap.org/export/embed.html?bbox=17.93998718261719%2C51.82516901319479%2C19.086685180664066%2C52.21307644807518&amp;layer=mapnik&amp;marker=52.019543202230835%2C18.513336181640625" style="border: 1px solid black"></iframe>
+
+
+            </div>
+          
+       
+          </div>
+        
+       
+        
+
+
+  
+
+     
+     
+      
+
+    </section>
+  
+    
+
+        
+
+          
+ 
+
+
+  
+      
+  
+    
+    
+    <script>
+      document.querySelectorAll('.read-more').forEach(button => {
+        button.addEventListener('click', () => {
+          alert('Czytaj więcej!');
+        });
+      });
+    </script>
+
+
+
+
+
+
+
+   
+
+   
+
+    
+  </main>
+
+  <footer class="scrollbar-hide overflow-x-hidden text-white font-poppins">
+
+    <div class="p-5 bg-blue2 w-full h-fit ">
+      <div class="max-w-screen-6xl md:py-5 py-0 px-5 ">
+        <div class="grid md:grid-cols-5 grid-cols-2 md:grid-rows-1 place-content-center justify-items-center">
+          <div class="md:col-span-1 col-span-2 md:py-10 md:m-0 m-5">
+            <img src="img/Logo_B.png" alt="logo" class="max-h-20 w-auto">
+          </div>
+          <div class="md:p-5 md:text-left text-center">
+            <a href="#" class="my-5 md:text-2xl text-xl font-semibold ">Firma</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Oferta</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Aktulaności</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Klienci</a><br>
+          </div>
+          <div class="md:p-5 md:text-left text-center">
+            <a href="#" class="my-5 md:text-2xl text-xl font-semibold ">Firma</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Oferta</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Aktulaności</a><br>
+            <a href="#" class="my-5 md:text-base text-sm font-light">Klienci</a><br>
+            
+          </div>
+          <div class="md:p-5 py-5 md:col-span-1 col-span-2 md:text-left text-center">
+            <a href="#" class="my-5 md:text-2xl text-3xl font-semibold mb-10 ">Kontakt</a><br>
+            <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">Kolska Szosa 30</a><br>
+            <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">62-700 Turek</a><br>
+            <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">+48 123-123-123</a><br>
+            <a href="#" class="my-5 md:text-base sm:text-sm text-base font-light">kontakt@infobase.com.pl
+
+            </a><br>
+          </div>
+          <div class="p-5 md:col-span-1 col-span-2 ">
+            <img src="img/TreflGdansk_Logo.png" alt="logo" class="max-h-40 w-auto">
+            <p class="text-center md:text-base text-base">Oficjalny partner</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="h-15 flex items-center justify-center">
+        <p class="font-poppins font-light sm:text-sm text-xs ">Copyrights © 2023 InfoBase Systemy Informatyczne</p>
+      </div>
+    </div>
+
+
+  </footer>
+
+</body>
+</html>
